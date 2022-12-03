@@ -1,0 +1,16 @@
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\bin\Debug\NileCrypt.exe.config
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\bin\Debug\NileCrypt.exe
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\bin\Debug\NileCrypt.pdb
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt.csprojAssemblyReference.cache
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\MainWindow.g.cs
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\App.g.cs
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt_MarkupCompile.cache
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt_MarkupCompile.lref
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\MainWindow.baml
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt.g.resources
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt.Properties.Resources.resources
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt.csproj.GenerateResource.cache
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt.csproj.CoreCompileInputs.cache
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt.exe
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\NileCrypt.pdb
+C:\Users\Freddo\source\repos\NileCrypt\NileCrypt\obj\Debug\GeneratedInternalTypeHelper.g.cs

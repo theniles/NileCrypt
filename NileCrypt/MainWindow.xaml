@@ -1,0 +1,89 @@
+﻿<Window x:Class="NileCrypt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NileCrypt"
+        mc:Ignorable="d"
+        Title="NileCrypt v1"
+        ResizeMode="CanResize"
+        Width="200"
+        Height="500"
+        MinHeight="500"
+        MinWidth="200"
+        Name="mainWnd"
+        Icon="lock.png"
+        Closed="mainWnd_Closed">
+
+    <Window.Style>
+        <Style TargetType="Window">
+        </Style>
+    </Window.Style>
+
+    <Window.Resources>
+        <local:EnumConverter x:Key="EnumConverter"></local:EnumConverter>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+
+            <RadioButton Click="RadioButton_Click" Margin="1,1,1,1" GroupName="type" 
+                         IsChecked="{Binding ElementName=mainWnd, Path=OpType, Converter={StaticResource EnumConverter}, ConverterParameter=File}">
+                File
+            </RadioButton>
+
+            <RadioButton Click="RadioButton_Click" Margin="1,1,1,1" GroupName="type" 
+                         IsChecked="{Binding ElementName=mainWnd, Path=OpType, Converter={StaticResource EnumConverter}, ConverterParameter=Folder}">
+                Folder
+            </RadioButton>
+
+            <Separator Margin="1,1,1,1"></Separator>
+
+            <RadioButton Margin="1,1,1,1" GroupName="type" 
+                         IsChecked="{Binding ElementName=mainWnd, Path=OpType2, Converter={StaticResource EnumConverter}, ConverterParameter=Decrypt}">
+                Decrypt
+            </RadioButton>
+
+            <RadioButton Margin="1,1,1,1" GroupName="type" 
+                         IsChecked="{Binding ElementName=mainWnd, Path=OpType2, Converter={StaticResource EnumConverter}, ConverterParameter=Encrypt}">
+                Encrypt
+            </RadioButton>
+
+            <CheckBox HorizontalAlignment="Left" Margin="1,1,1,1" 
+                      IsChecked="{Binding ElementName=mainWnd, Path=EncryptSubDirectories}" IsEnabled="{Binding ElementName=mainWnd, Path=TheFuckShouldINameIt}">Do subfolders</CheckBox>
+
+            <CheckBox HorizontalAlignment="Left" Margin="1,1,1,1"
+                      IsChecked="{Binding ElementName=mainWnd, Path=DeleteInputFiles}">Delete input files on success</CheckBox>
+
+            <CheckBox HorizontalAlignment="Left" Margin="1,1,1,1"
+                      IsChecked="{Binding ElementName=mainWnd, Path=DeleteOutputFiles}">Delete output files on failiure</CheckBox>
+
+            <TextBlock HorizontalAlignment="Left" Margin="1,1,1,1">Input path</TextBlock>
+            <TextBox Text="{Binding ElementName=mainWnd, Path=InPath, UpdateSourceTrigger=LostFocus}" HorizontalAlignment="Stretch" Margin="1,1,1,1"></TextBox>
+            <Button Margin="1,1,1,1" Click="Button_Click">Browse input path</Button>
+
+            <TextBlock HorizontalAlignment="Left" Margin="1,1,1,1">Output path</TextBlock>
+            <TextBox Text="{Binding ElementName=mainWnd, Path=OutPath, UpdateSourceTrigger=LostFocus}" HorizontalAlignment="Stretch" Margin="1,1,1,1"></TextBox>
+            <Button Margin="1,1,1,1" Click="Button_Click_2">Browse output path</Button>
+
+            <TextBlock HorizontalAlignment="Left" Margin="1,1,1,1">Key</TextBlock>
+            <TextBox Text="{Binding ElementName=mainWnd, Path=Key, UpdateSourceTrigger=LostFocus}" HorizontalAlignment="Stretch" Margin="1,1,1,1"></TextBox>
+
+            <Button Click="Button_Click_1" IsEnabled="{Binding ElementName=mainWnd, Path=CanExecute}" Margin="1,1,1,1">Execute operation</Button>
+
+            <ProgressBar Minimum="0" Maximum="100" Height="10" Margin="1,1,1,1" Name="progressBar"></ProgressBar>
+
+        </StackPanel>
+        <ListBox Name="outputLb" Margin="1,1,1,1" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" TextWrapping="Wrap"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+    
+</Window>
